@@ -4,7 +4,7 @@ import {
     FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaFigma, FaGitAlt,
 } from 'react-icons/fa';
 import {
-    SiTailwindcss, SiMongodb, SiAdobephotoshop, SiVisualstudiocode, SiCsharp,
+    SiTailwindcss, SiMongodb, SiAdobephotoshop, SiVisualstudiocode, SiDotnet,
     SiMysql,
 } from 'react-icons/si';
 
@@ -16,7 +16,7 @@ const SkillsSection = () => {
         { label: 'React', icon: <FaReact className="text-white text-3xl" />, color: 'blue' },
         { label: 'Node.js', icon: <FaNodeJs className="text-white text-3xl" />, color: 'green' },
         { label: 'MongoDB', icon: <SiMongodb className="text-white text-3xl" />, color: 'green' },
-        { label: 'C#', icon: <SiCsharp className="text-white text-3xl" />, color: 'purple' },
+        { label: 'C#', icon: <SiDotnet className="text-white text-3xl" />, color: 'purple' },
         { label: 'MySQL', icon: <SiMysql className="text-white text-3xl" />, color: 'red' },
     ];
 
