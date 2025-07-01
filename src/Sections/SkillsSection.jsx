@@ -3,8 +3,9 @@ import GlassIcons from '../Components/GlassIcons/GlassIcons';
 import {
     FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaFigma, FaGitAlt,
 } from 'react-icons/fa';
+import { BiLogoVisualStudio } from "react-icons/bi";
 import {
-    SiTailwindcss, SiMongodb, SiAdobephotoshop, SiVisualstudio, SiDotnet,
+    SiTailwindcss, SiMongodb, SiAdobephotoshop, SiDotnet,
     SiMysql,
 } from 'react-icons/si';
 
@@ -28,7 +29,7 @@ const SkillsSection = () => {
 
     const extras = [
         { label: 'Git', icon: <FaGitAlt className="text-white text-3xl" />, color: 'red' },
-        { label: 'VS Code', icon: <SiVisualstudio className="text-white text-3xl" />, color: 'blue' },
+        { label: 'VS Code', icon: <BiLogoVisualStudio className="text-white text-3xl" />, color: 'blue' },
     ];
 
     return (
