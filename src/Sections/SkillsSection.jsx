@@ -4,7 +4,7 @@ import {
     FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaFigma, FaGitAlt,
 } from 'react-icons/fa';
 import {
-    SiTailwindcss, SiMongodb, SiAdobephotoshop, SiVisualstudiocode, SiDotnet,
+    SiTailwindcss, SiMongodb, SiAdobephotoshop, SiVisualstudio, SiDotnet,
     SiMysql,
 } from 'react-icons/si';
 
@@ -28,7 +28,7 @@ const SkillsSection = () => {
 
     const extras = [
         { label: 'Git', icon: <FaGitAlt className="text-white text-3xl" />, color: 'red' },
-        { label: 'VS Code', icon: <SiVisualstudiocode className="text-white text-3xl" />, color: 'blue' },
+        { label: 'VS Code', icon: <SiVisualstudio className="text-white text-3xl" />, color: 'blue' },
     ];
 
     return (
