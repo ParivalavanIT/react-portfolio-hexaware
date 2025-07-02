@@ -50,10 +50,10 @@ const SkillsSection = () => {
             <div className="grid md:grid-cols-2 gap-8">
                 {/* LEFT: Development */}
                 <div
-                    className="bg-white/30 backdrop-blur-lg rounded-2xl shadow-md p-6 h-full"
+                    className="bg-black/30 backdrop-blur-lg rounded-2xl shadow-md p-6 h-full"
                     data-aos="fade-right"
                 >
-                    <h3 className="text-2xl font-bold text-black text-center mb-6">Development</h3>
+                    <h3 className="text-2xl font-bold text-white text-center mb-6">Development</h3>
                     <GlassIcons items={development} className="justify-center" />
                 </div>
 
@@ -61,21 +61,21 @@ const SkillsSection = () => {
                 <div className="flex flex-col gap-8">
                     {/* Design */}
                     <div
-                        className="bg-white/30 backdrop-blur-lg rounded-2xl shadow-md p-6"
+                        className="bg-black/30 backdrop-blur-lg rounded-2xl shadow-md p-6"
                         data-aos="fade-left"
                         data-aos-delay="100"
                     >
-                        <h3 className="text-2xl font-bold text-black text-center mb-6">Design</h3>
+                        <h3 className="text-2xl font-bold text-white text-center mb-6">Design</h3>
                         <GlassIcons items={design} className="justify-center" />
                     </div>
 
                     {/* Extras */}
                     <div
-                        className="bg-white/30 backdrop-blur-lg rounded-2xl shadow-md p-6"
+                        className="bg-black/30 backdrop-blur-lg rounded-2xl shadow-md p-6"
                         data-aos="fade-left"
                         data-aos-delay="200"
                     >
-                        <h3 className="text-2xl font-bold text-black text-center mb-6">Extras</h3>
+                        <h3 className="text-2xl font-bold text-white text-center mb-6">Extras</h3>
                         <GlassIcons items={extras} className="justify-center" />
                     </div>
                 </div>
