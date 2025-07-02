@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const projects = [
     {
@@ -45,31 +47,44 @@ const projects = [
     },
 ];
 
-const ProjectsSection = () => (
-    <section id="projects" className="py-16 px-6 bg-transparent">
-        <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-extrabold text-center text-black mb-12">Projects</h2>
-            <div className="grid md:grid-cols-2 gap-8">
-                {projects.map((project) => (
-                    <div
-                        key={project.name}
-                        className="bg-white/30 backdrop-blur-lg rounded-2xl shadow-lg p-6 flex flex-col justify-between"
-                    >
-                        <h3 className="text-2xl font-bold text-black mb-2">{project.name}</h3>
-                        <p className="text-black/80 flex-grow">{project.description}</p>
-                        <a
-                            href={project.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="mt-4 inline-block text-blue-400 font-medium hover:underline"
+const ProjectsSection = () => {
+    useEffect(() => {
+        AOS.init({ duration: 1000 });
+    }, []);
+
+    return (
+        <section id="projects" className="py-16 px-6 bg-transparent">
+            <div className="max-w-6xl mx-auto">
+                <h2
+                    className="text-4xl font-extrabold text-center text-black mb-12"
+                    data-aos="fade-up"
+                >
+                    Projects
+                </h2>
+                <div className="grid md:grid-cols-2 gap-8">
+                    {projects.map((project, idx) => (
+                        <div
+                            key={project.name}
+                            data-aos="zoom-in-up"
+                            data-aos-delay={idx * 100}
+                            className="bg-white/30 backdrop-blur-lg rounded-2xl shadow-lg p-6 flex flex-col justify-between"
                         >
-                            View on GitHub →
-                        </a>
-                    </div>
-                ))}
+                            <h3 className="text-2xl font-bold text-black mb-2">{project.name}</h3>
+                            <p className="text-black/80 flex-grow">{project.description}</p>
+                            <a
+                                href={project.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="mt-4 inline-block text-blue-400 font-medium hover:underline"
+                            >
+                                View on GitHub →
+                            </a>
+                        </div>
+                    ))}
+                </div>
             </div>
-        </div>
-    </section>
-);
+        </section>
+    );
+};
 
 export default ProjectsSection;

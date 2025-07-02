@@ -1,10 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FaAward } from 'react-icons/fa';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const AchievementSection = () => {
+    useEffect(() => {
+        AOS.init({ duration: 1000 });
+    }, []);
+
     return (
         <section id="achievement" className="py-16 px-6">
-            <div className="max-w-4xl mx-auto bg-amber-400/20 border border-amber-300 backdrop-blur-md rounded-2xl shadow-xl p-8 text-black relative overflow-hidden">
+            <div
+                className="max-w-4xl mx-auto bg-amber-400/20 border border-amber-300 backdrop-blur-md rounded-2xl shadow-xl p-8 text-black relative overflow-hidden"
+                data-aos="fade-up"
+            >
                 {/* Glowing circle behind the award icon */}
                 <div className="absolute -top-8 -left-8 w-32 h-32 bg-amber-300 opacity-30 rounded-full blur-3xl z-0"></div>
 

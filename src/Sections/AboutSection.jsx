@@ -1,15 +1,35 @@
-import React from 'react'
-import image from '../assets/parivalavan.jpg'; // Adjust the path to your image
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import image from '../assets/parivalavan.jpg'; // Adjust the path
+
 const AboutSection = () => {
+    useEffect(() => {
+        AOS.init({ duration: 1000 });
+    }, []);
+
     return (
-        <div className="relative max-w-6xl p-20 bg-white/20 backdrop-blur-md rounded-2xl shadow-lg flex flex-col md:flex-row items-center gap-4 mx-auto m-4" id='about'>
+        <div
+            className="relative max-w-6xl p-20 bg-white/20 backdrop-blur-md rounded-2xl shadow-lg flex flex-col md:flex-row items-center gap-4 mx-auto m-4"
+            id="about"
+        >
             {/* Text Section */}
-            <div className="w-full md:w-1/2 flex flex-col items-start justify-center text-left space-y-4">
-                <h1 className="text-4xl font-bold mb-4 ">About Me</h1>
+            <div
+                className="w-full md:w-1/2 flex flex-col items-start justify-center text-left space-y-4"
+                data-aos="fade-right"
+            >
+                <h1 className="text-4xl font-bold mb-4">About Me</h1>
                 <p>
-                    I'm Parivalavan, a passionate and energetic developer who thrives on building intuitive, visually stunning, and user-centric applications. My love for tech started with curiosity and turned into a craft that lets me create and innovate daily.
-                    With a strong foundation in front-end technologies and experience in full-stack development, I enjoy turning complex ideas into elegant solutions. I'm constantly exploring new tools, frameworks, and creative workflows that push the boundaries of web experiences.
-                    Beyond the code, I{"'"}m a problem-solver at heart, always ready to collaborate, learn, and deliver impactful digital products that make a difference.
+                    I'm Parivalavan, a passionate and energetic developer who thrives on building intuitive, visually
+                    stunning, and user-centric applications. My love for tech started with curiosity and turned into a
+                    craft that lets me create and innovate daily.
+                    <br />
+                    With a strong foundation in front-end technologies and experience in full-stack development, I enjoy
+                    turning complex ideas into elegant solutions. I'm constantly exploring new tools, frameworks, and
+                    creative workflows that push the boundaries of web experiences.
+                    <br />
+                    Beyond the code, I'm a problem-solver at heart, always ready to collaborate, learn, and deliver
+                    impactful digital products that make a difference.
                 </p>
 
                 <a
@@ -21,16 +41,18 @@ const AboutSection = () => {
             </div>
 
             {/* Image Section */}
-            <div className="w-full md:w-1/2 flex justify-center">
+            <div
+                className="w-full md:w-1/2 flex justify-center"
+                data-aos="fade-left"
+            >
                 <img
-                    src={image} // Adjust the path to your image
+                    src={image}
                     alt="Parivalavan"
                     className="w-64 h-64 object-cover rounded-full border-4 border-white shadow-xl"
                 />
             </div>
         </div>
+    );
+};
 
-    )
-}
-
-export default AboutSection
+export default AboutSection;

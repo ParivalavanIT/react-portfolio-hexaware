@@ -4,7 +4,9 @@ import HeroSection from '../Sections/HeroSection.jsx';
 import AboutSection from '../Sections/AboutSection.jsx';
 import AchievementSection from '../Sections/AcheivementSection.jsx';
 import SkillsSection from '../Sections/SkillsSection.jsx';
+import ServicesSection from '../Sections/ServicesSection.jsx';
 import ProjectsSection from '../Sections/ProjectsSection.jsx';
+
 import FormSection from '../Sections/FormSection.jsx';
 import Footer from '../Sections/Footer.jsx';
 
@@ -26,6 +28,7 @@ const HomePage = () => {
             <AchievementSection />
             <AboutSection />
             <SkillsSection />
+            <ServicesSection />
             <ProjectsSection />
             <FormSection />
             <Footer />
