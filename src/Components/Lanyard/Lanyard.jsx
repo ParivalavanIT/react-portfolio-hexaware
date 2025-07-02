@@ -1,5 +1,5 @@
 /*
-	Installed from https://reactbits.dev/tailwind/
+  Installed from https://reactbits.dev/tailwind/
 */
 
 /* eslint-disable react/no-unknown-property */
